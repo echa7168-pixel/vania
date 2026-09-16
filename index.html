@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petualangan Echa 🚀</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #020014;
+    color: white;
+}
+
+.space {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #4b1d91 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, #123b83 0%, transparent 30%),
+        linear-gradient(135deg, #030016, #09002e, #00152d);
+}
+
+/* ================= BINTANG ================= */
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+.s1 {top:8%;left:10%}
+.s2 {top:17%;left:25%;animation-delay:.4s}
+.s3 {top:12%;left:72%;animation-delay:1s}
+.s4 {top:30%;left:50%;animation-delay:.7s}
+.s5 {top:48%;left:8%;animation-delay:.2s}
+.s6 {top:72%;left:28%;animation-delay:1.2s}
+.s7 {top:80%;left:55%;animation-delay:.5s}
+.s8 {top:40%;left:88%;animation-delay:.9s}
+.s9 {top:90%;left:80%;animation-delay:.3s}
+.s10 {top:25%;left:90%;animation-delay:1.5s}
+.s11 {top:60%;left:70%;animation-delay:.6s}
+.s12 {top:85%;left:15%;animation-delay:1.1s}
+
+@keyframes twinkle {
+    from {
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    to {
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* ================= JUDUL ================= */
+
+.title {
+    position:absolute;
+    top:25px;
+    width:100%;
+    text-align:center;
+    z-index:20;
+}
+
+.title h1 {
+    font-size:38px;
+    text-shadow:0 0 20px #8d64ff;
+    animation:titleMove 3s infinite ease-in-out;
+}
+
+.title h2 {
+    margin-top:5px;
+    font-size:58px;
+    letter-spacing:12px;
+    color:#ff6fb5;
+
+    text-shadow:
+        0 0 10px #ff6fb5,
+        0 0 25px #ff3d91;
+
+    animation:echaGlow 2s infinite alternate;
+}
+
+.title p {
+    margin-top:4px;
+    font-size:16px;
+    opacity:.85;
+}
+
+@keyframes titleMove {
+    50% {
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes echaGlow {
+    to {
+        transform:scale(1.08);
+    }
+}
+
+/* ================= ASTRONOT ECHA ================= */
+
+.astronaut {
+    position:absolute;
+    left:17%;
+    top:43%;
+    font-size:105px;
+    z-index:10;
+
+    animation:
+        astronautMove 4s infinite ease-in-out,
+        astronautRotate 5s infinite ease-in-out;
+}
+
+@keyframes astronautMove {
+    0%,100% {
+        transform:translateY(0);
+    }
+
+    50% {
+        transform:translateY(-35px);
+    }
+}
+
+@keyframes astronautRotate {
+    0%,100% {
+        rotate:-6deg;
+    }
+
+    50% {
+        rotate:6deg;
+    }
+}
